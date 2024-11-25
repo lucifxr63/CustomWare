@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <!--=============== FAVICON ===============-->
-   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+   <link rel="shortcut icon" href="assets/img/CustomWare/icon.svg" type="image/x-icon">
 
    <!--=============== REMIXICONS ===============-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
@@ -25,7 +25,8 @@
    <header class="header" id="header">
       <nav class="nav container">
          <a href="#" class="nav__logo">
-            <i class="ri-building-3-line"></i>
+            <!-- Imagen del logo -->
+            <img src="assets/img/CustomWare/icon.svg" alt="Logo de CustomWare" class="nav__logo-img">
             <span>CustomWare</span>
          </a>
 
@@ -98,40 +99,40 @@
 
                <div class="home__info">
                   <div>
-                     <h3 class="home__info-title">10+</h3>
-                     <p class="home__info-description">Años de <br> Experiencia</p>
+                     <h3 class="home__info-title">5+</h3>
+                     <p class="home__info-description">Años de <br> Innovación</p>
                   </div>
 
                   <div>
-                     <h3 class="home__info-title">50+</h3>
-                     <p class="home__info-description">Proyectos <br> Completados</p>
+                     <h3 class="home__info-title">15+</h3>
+                     <p class="home__info-description">Clientes <br> Satisfechos</p>
                   </div>
                </div>
+
             </div>
 
             <div class="home__images">
-               <img src="assets/img/home-img-1.png" alt="image" class="home__img-1">
-               <img src="assets/img/home-img-2.png" alt="image" class="home__img-2">
+               <img src="assets/img/CustomWare/compu.jpg" alt="image" class="home__img-1">
+               <img src="assets/img/CustomWare/grafico.jpg" alt="image" class="home__img-2">
             </div>
          </div>
 
       </section>
 
       <div class="color-controls" id="color-controls">
-
-         <button id="toggle-controls" class="color-controls__toggle">-</button>
+         <button id="toggle-controls" class="color-controls__toggle">esconder</button>
          <div class="color-controls__content">
             <h3>Cambia los colores de la página</h3>
 
-            <div class="color-controls__grid">
-               <div>
-                  <label for="first-color">Color Principal:</label>
-                  <input type="color" id="first-color" value="#e76f51">
-               </div>
-               <div>
-                  <label for="second-color">Color Secundario:</label>
-                  <input type="color" id="second-color" value="#f4a261">
-               </div>
+            <!-- Botones de categorías -->
+            <div class="color-categories">
+               <button class="color-category-btn active" data-category="text-colors">Textos</button>
+               <button class="color-category-btn" data-category="container-colors">Contenedores</button>
+               <button class="color-category-btn" data-category="schemes">Esquemas</button>
+            </div>
+
+            <!-- Sección: Textos -->
+            <div class="color-category-content active" id="text-colors">
                <div>
                   <label for="title-color">Color del Título:</label>
                   <input type="color" id="title-color" value="#3b405a">
@@ -145,20 +146,20 @@
                   <input type="color" id="text-color-light" value="#b0b0b0">
                </div>
                <div>
+                  <label for="button-white-color">Color del Texto (Blanco):</label>
+                  <input type="color" id="button-white-color" value="#ffffff">
+               </div>
+            </div>
+
+            <!-- Sección: Contenedores -->
+            <div class="color-category-content" id="container-colors">
+               <div>
                   <label for="body-color">Color del Fondo:</label>
                   <input type="color" id="body-color" value="#ffffff">
                </div>
                <div>
                   <label for="container-color">Color de Contenedores:</label>
                   <input type="color" id="container-color" value="#ffffff">
-               </div>
-               <div>
-                  <label for="white-color">Color Blanco:</label>
-                  <input type="color" id="white-color" value="#ffffff">
-               </div>
-               <div>
-                  <label for="black-color">Color Negro:</label>
-                  <input type="color" id="black-color" value="#171717">
                </div>
                <div>
                   <label for="gray-border">Color de Borde Gris:</label>
@@ -168,22 +169,37 @@
                   <label for="black-border">Color de Borde Negro:</label>
                   <input type="color" id="black-border" value="#282828">
                </div>
-               
+            </div>
+
+            <!-- Sección: Esquemas -->
+            <div class="color-category-content" id="schemes">
                <div>
-                  <label for="first-gradient">Gradiente Principal:</label>
-                  <input type="color" id="first-gradient-start" value="#e76f51">
-                  <input type="color" id="first-gradient-end" value="#f4a261">
-               </div>
-               <div>
-                  <label for="button-white-color">Color del Texto (Blanco):</label>
-                  <input type="color" id="button-white-color" value="#ffffff">
-               </div>
-               <div>
-                  <label for="button-first-color">Color del Enlace (Primario):</label>
-                  <input type="color" id="button-first-color" value="#e76f51">
+                  <label for="color-scheme">Seleccionar Esquema:</label>
+                  <select id="color-scheme">
+                     <!-- Esquemas originales -->
+                     <option value="innovation">Innovación Tecnológica</option>
+                     <option value="energy">Energía y Creatividad</option>
+                     <option value="minimal">Elegancia Minimalista</option>
+                     <option value="fresh">Frescura Digital</option>
+                     <option value="trust">Confiabilidad y Poder</option>
+
+                     <!-- Nuevos esquemas -->
+                     <option value="warm-tone">Tonos Cálidos</option>
+                     <option value="nature-green">Verde Natural</option>
+                     <option value="pastel-harmony">Armonía Pastel</option>
+                     <option value="earthy-tones">Tonos Tierra</option>
+                     <option value="vibrant-neon">Neón Vibrante</option>
+                     <option value="bold-contrast">Contraste Audaz</option>
+                     <option value="sunset-glow">Brillo del Atardecer</option>
+                     <option value="icy-blue">Azul Gélido</option>
+                  </select>
                </div>
             </div>
+
          </div>
+      </div>
+
+
       </div>
 
       <!-- Botón flotante para abrir el menú -->
@@ -233,12 +249,11 @@
             </div>
 
             <div class="about__images">
-               <img src="assets/img/about-img-1.png" alt="image" class="about__img-1">
-               <img src="assets/img/about-img-2.png" alt="image" class="about__img-2">
+               <img src="assets/img/CustomWare/persona.jpg" alt="image" class="about__img-1">
+               <img src="assets/img/CustomWare/equipo.jpg" alt="image" class="about__img-2">
             </div>
          </div>
       </section>
-      <!--==================== SERVICIOS ====================-->
       <section class="services section" id="services">
          <div class="services__container container grid">
             <div class="services__data">
@@ -259,9 +274,10 @@
 
             <div class="services__swiper swiper">
                <div class="swiper-wrapper">
+                  <!-- Desarrollo a Medida -->
                   <article class="services__card swiper-slide">
                      <div class="services__icon">
-                        <i class="ri-code-line"></i>
+                        <i class="ri-braces-line"></i> <!-- Icono actualizado -->
                      </div>
 
                      <h3 class="services__title">Desarrollo <br> a Medida</h3>
@@ -272,9 +288,10 @@
                      </p>
                   </article>
 
+                  <!-- Automatización de Procesos -->
                   <article class="services__card swiper-slide">
                      <div class="services__icon">
-                        <i class="ri-flow-chart-line"></i>
+                        <i class="ri-settings-3-line"></i> <!-- Icono actualizado -->
                      </div>
 
                      <h3 class="services__title">Automatización <br> de Procesos</h3>
@@ -285,9 +302,10 @@
                      </p>
                   </article>
 
+                  <!-- Integración de Sistemas -->
                   <article class="services__card swiper-slide">
                      <div class="services__icon">
-                        <i class="ri-stack-line"></i>
+                        <i class="ri-links-line"></i> <!-- Icono actualizado -->
                      </div>
 
                      <h3 class="services__title">Integración <br> de Sistemas</h3>
@@ -298,9 +316,10 @@
                      </p>
                   </article>
 
+                  <!-- Soporte Técnico -->
                   <article class="services__card swiper-slide">
                      <div class="services__icon">
-                        <i class="ri-lifebuoy-line"></i>
+                        <i class="ri-customer-service-2-line"></i> <!-- Icono actualizado -->
                      </div>
 
                      <h3 class="services__title">Soporte <br> Técnico</h3>
@@ -310,9 +329,10 @@
                      </p>
                   </article>
 
+                  <!-- Análisis de Datos -->
                   <article class="services__card swiper-slide">
                      <div class="services__icon">
-                        <i class="ri-line-chart-line"></i>
+                        <i class="ri-bar-chart-box-line"></i> <!-- Icono actualizado -->
                      </div>
 
                      <h3 class="services__title">Análisis <br> de Datos</h3>
@@ -337,59 +357,66 @@
          <div class="services__shape"></div>
       </section>
 
+
       <!--==================== PROYECTOS ====================-->
       <section class="projects section" id="projects">
          <span class="section__subtitle">NUESTROS PROYECTOS</span>
-         <h2 class="section__title">Casos de Éxito <br> Más Recientes</h2>
+         <h2 class="section__title">Casos de Éxito <br></h2>
 
          <div class="projects__container container grid">
+            <!-- Primera Carta -->
             <article class="projects__card">
-               <img src="assets/img/projects-img-1.png" alt="image" class="projects__img">
+               <img src="assets/img/CustomWare/reccius.png" alt="Flujo de Aprobación" class="projects__img">
 
                <div class="projects__data">
-                  <span>Optimización de Procesos</span>
-                  <h2 class="projects__title">Sistema de Gestión de Inventario</h2>
-                  <span class="projects__date">Enero 15, 2024</span>
+                  <span>Reccius - Flujo de Aprobación</span>
+                  <h2 class="projects__title">Optimización de Procesos</h2>
+                  <span class="projects__date">Octubre 2024</span>
 
                   <p>
-                     Implementación de un sistema de inventario para una empresa de retail,
-                     logrando una reducción de errores del 30% y un aumento del 40% en la velocidad
-                     de procesamiento de pedidos.
+                     Implementamos un sistema personalizado de flujos de aprobación para Reccius,
+                     optimizando sus procesos internos y mejorando la eficiencia en un 40%.
+                     Esto permitió agilizar las aprobaciones y reducir errores operativos.
                   </p>
                </div>
             </article>
 
+            <!-- Segunda Carta -->
             <article class="projects__card">
-               <img src="assets/img/projects-img-2.png" alt="image" class="projects__img">
+               <img src="assets/img/custom-page.jpg" alt="Página a Medida" class="projects__img">
 
                <div class="projects__data">
-                  <span>Automatización de Flujos</span>
-                  <h2 class="projects__title">Plataforma de Recursos Humanos</h2>
-                  <span class="projects__date">Mayo 21, 2024</span>
+                  <span>ConsultoraIPS - Página a Medida</span>
+                  <h2 class="projects__title">Diseño y Flujo de Aprobación</h2>
+                  <span class="projects__date">Marzo 2020</span>
 
                   <p>
-                     Desarrollo de una plataforma de recursos humanos que automatiza procesos
-                     como contrataciones y evaluaciones, reduciendo el tiempo administrativo en un 50%.
+                     Desarrollamos un sitio web a medida para ConsultoraIPS, con un sistema de flujos
+                     de aprobación integrado. Esto no solo mejoró la experiencia de los usuarios,
+                     sino que también automatizó procesos clave para aumentar la productividad.
                   </p>
                </div>
             </article>
 
+            <!-- Tercera Carta -->
             <article class="projects__card">
-               <img src="assets/img/projects-img-3.png" alt="image" class="projects__img">
+               <img src="assets/img/web-application.jpg" alt="Aplicación Web" class="projects__img">
 
                <div class="projects__data">
-                  <span>Integración de Sistemas</span>
-                  <h2 class="projects__title">Conexión de ERP y CRM</h2>
-                  <span class="projects__date">Julio 03, 2024</span>
+                  <span>Reccius - Aplicación Web</span>
+                  <h2 class="projects__title">Integración de Sistemas</h2>
+                  <span class="projects__date">Octubre 2017</span>
 
                   <p>
-                     Integración de un sistema ERP con una plataforma CRM para unificar datos y
-                     mejorar la visibilidad de las operaciones comerciales, impulsando un crecimiento del 25% en ventas.
+                     Creamos una aplicación web completamente integrada con los sistemas existentes
+                     de Reccius. Esto permitió centralizar la información y mejorar la eficiencia
+                     operativa, reduciendo tiempos de trabajo en un 30%.
                   </p>
                </div>
             </article>
          </div>
       </section>
+
 
 
       <!--==================== CONTACTO ====================-->
@@ -399,7 +426,7 @@
             <h2 class="section__title">Escríbenos y <br> Potenciemos tu Negocio</h2>
 
             <div class="contact__container grid">
-               <img src="assets/img/contact-img.png" alt="image" class="contact__img">
+               <img src="assets/img/CustomWare/trabajo.jpg" alt="image" class="contact__img">
 
                <div class="contact__data grid">
                   <div class="contact__card">

@@ -7,20 +7,18 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(18, 95%, 55%);
-  --second-color: hsl(42, 98%, 52%);
-  --first-gradient: linear-gradient(90deg,
-      hsl(18, 95%, 55%),
-      hsl(18, 98%, 64%));
-  --title-color: hsl(255, 12%, 12%);
-  --text-color: hsl(225, 12%, 24%);
-  --text-color-light: hsl(255, 4%, 70%);
-  --body-color: hsl(0, 0%, 100%);
+  --first-color: hsl(34, 89%, 53%); /* Naranja Brillante */
+  --second-color: hsl(48, 94%, 55%); /* Amarillo Dorado */
+  --first-gradient: linear-gradient(90deg, hsl(34, 89%, 53%), hsl(48, 94%, 55%));
+  --title-color: hsl(35, 25%, 15%); /* Marrón Oscuro */
+  --text-color: hsl(35, 15%, 35%); /* Marrón Claro */
+  --text-color-light: hsl(35, 10%, 65%); /* Beige Claro */
+  --body-color: hsl(0, 0%, 98%);
   --container-color: hsl(0, 0%, 100%);
   --white-color: hsl(0, 0%, 100%);
-  --black-color: hsl(255, 20%, 10%);
-  --gray-border: hsl(255, 6%, 90%);
-  --black-border: hsl(255, 10%, 20%);
+  --black-color: hsl(35, 25%, 10%); /* Marrón Profundo */
+  --gray-border: hsl(35, 10%, 90%);
+  --black-border: hsl(35, 20%, 30%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -144,6 +142,63 @@
   opacity: 0;
   pointer-events: none;
 }
+.color-schemes {
+  grid-column: span 2; /* Extiende la sección en ambas columnas */
+  margin-top: 1rem;
+}
+
+.color-schemes label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+}
+
+.color-schemes select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--gray-border);
+  border-radius: 4px;
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  background-color: var(--body-color);
+  cursor: pointer;
+}
+/* Botones de categorías */
+.color-categories {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.color-category-btn {
+  flex: 1;
+  padding: 0.5rem;
+  background: var(--first-color);
+  color: var(--white-color);
+  border: 1px solid var(--gray-border);
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.color-category-btn.active {
+  background: var(--second-color);
+  font-weight: bold;
+}
+
+/* Contenido de categorías */
+.color-category-content {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.color-category-content.active {
+  display: grid;
+}
+
 
 
 /*=============== BASE ===============*/
@@ -266,6 +321,20 @@ img {
   color: var(--white-color);
   cursor: pointer;
   transition: color .4s;
+}
+.nav__logo-img {
+  fill: var(--logo-color, #000000); /* Default color */
+  width: 40px;
+  height: auto;
+  transition: fill 0.3s ease;
+}
+
+.header.dark-theme .nav__logo-img {
+  fill: #ffffff; /* Logo blanco sobre fondo oscuro */
+}
+
+.header.light-theme .nav__logo-img {
+  fill: #000000; /* Logo negro sobre fondo claro */
 }
 
 /* Navigation for mobile devices */
