@@ -5,20 +5,31 @@
 :root {
   --header-height: 3.5rem;
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(34, 89%, 53%); /* Naranja Brillante */
-  --second-color: hsl(48, 94%, 55%); /* Amarillo Dorado */
-  --first-gradient: linear-gradient(90deg, hsl(34, 89%, 53%), hsl(48, 94%, 55%));
-  --title-color: hsl(35, 25%, 15%); /* Marrón Oscuro */
-  --text-color: hsl(35, 15%, 35%); /* Marrón Claro */
-  --text-color-light: hsl(35, 10%, 65%); /* Beige Claro */
+  /*========== Colors (Fresh) ==========*/
+  /* Color mode HSL(hue, saturation, lightness) */
+  --first-color: hsl(185, 80%, 45%);
+  /* Azul turquesa */
+  --second-color: hsl(338, 75%, 50%);
+  /* Rosa brillante */
+  --first-gradient: linear-gradient(90deg, hsl(185, 80%, 45%), hsl(338, 75%, 50%));
+  --title-color: hsl(0, 0%, 13%);
+  /* Negro suave */
+  --text-color: hsl(0, 0%, 30%);
+  /* Gris medio */
+  --text-color-light: hsl(0, 0%, 74%);
+  /* Gris claro */
   --body-color: hsl(0, 0%, 98%);
+  /* Fondo claro */
   --container-color: hsl(0, 0%, 100%);
+  /* Blanco puro */
   --white-color: hsl(0, 0%, 100%);
-  --black-color: hsl(35, 25%, 10%); /* Marrón Profundo */
-  --gray-border: hsl(35, 10%, 90%);
-  --black-border: hsl(35, 20%, 30%);
+  /* Blanco */
+  --black-color: hsl(0, 0%, 0%);
+  /* Negro */
+  --gray-border: hsl(0, 0%, 87%);
+  /* Gris claro para bordes */
+  --black-border: hsl(0, 0%, 20%);
+  /* Gris oscuro para bordes */
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -52,6 +63,7 @@
     --small-font-size: .875rem;
   }
 }
+
 /*=============== CONTROL ===============*/
 .color-controls {
   position: fixed;
@@ -232,19 +244,23 @@ img {
   cursor: pointer;
   transition: color .4s;
 }
+
 .nav__logo-img {
-  fill: var(--logo-color, #000000); /* Default color */
+  fill: var(--logo-color, #000000);
+  /* Default color */
   width: 40px;
   height: auto;
   transition: fill 0.3s ease;
 }
 
 .header.dark-theme .nav__logo-img {
-  fill: #ffffff; /* Logo blanco sobre fondo oscuro */
+  fill: #ffffff;
+  /* Logo blanco sobre fondo oscuro */
 }
 
 .header.light-theme .nav__logo-img {
-  fill: #000000; /* Logo negro sobre fondo claro */
+  fill: #000000;
+  /* Logo negro sobre fondo claro */
 }
 
 /* Navigation for mobile devices */
@@ -401,7 +417,8 @@ img {
 }
 
 .button:hover {
-  box-shadow: 0 8px 32px hsla(18, 95%, 55%, .3); /* Este se basa en el gradiente inicial */
+  box-shadow: 0 8px 32px hsla(18, 95%, 55%, .3);
+  /* Este se basa en el gradiente inicial */
   color: var(--white-color, #ffffff);
 }
 
